@@ -5,3 +5,4 @@ Rails.application.routes.draw do
 
   get '/students/:id/activate', to: 'students#activate'
 end
+
