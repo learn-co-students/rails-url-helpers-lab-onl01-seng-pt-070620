@@ -7,4 +7,10 @@ class CreateStudents < ActiveRecord::Migration
       t.timestamps null: false
     end
   end
+
+  def change
+    add_column :students, :active, :boolean, default: false
+  end
+
+  
 end

@@ -1,1 +1,9 @@
+
 <h1><%= @student.to_s %></h1>
+
+
+"This student is currently inactive."
+"This student is currently active."
+
+
+<%= link_to "activate", activate_student_path(@student.id) %>
