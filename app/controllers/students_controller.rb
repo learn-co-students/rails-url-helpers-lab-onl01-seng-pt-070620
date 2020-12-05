@@ -11,7 +11,7 @@ class StudentsController < ApplicationController
 
   def activate
     @student = set_student
-    activate_student_path(@student)
+    change_activate_status(@student)
     redirect_to student_path
   end
 
@@ -20,9 +20,10 @@ class StudentsController < ApplicationController
     def set_student
       @student = Student.find(params[:id])
     end
-    
-    def activate_student_path(student)
+
+    def change_activate_status(student)
       student.active = !student.active
       student.save
     end
+  
 end
